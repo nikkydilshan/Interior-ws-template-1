@@ -99,7 +99,7 @@ function renderHome() {
     <div class="container">
       <div class="brand-story">
         <div class="brand-story__image">
-          <div style="background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:10rem;color:white">IP</div>
+          <div style="overflow:hidden;"><img src="assets/images/classic_pop_ceiling.png" alt="Interior Planet Lab" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
         </div>
         <div>
           <button class="btn btn-accent" onclick="navigate('/about')">READ OUR HISTORY</button>
@@ -155,9 +155,11 @@ function renderCatalogue(type, params) {
     </div>
   </header>
   
-  <div class="catalogue-filters">
-    <div class="filter-pill ${activeCat === 'all' ? 'active' : ''}" onclick="navigate('/${type}')">ALL SPECS</div>
-    ${cats.map(c => `<div class="filter-pill ${activeCat === c.id ? 'active' : ''}" onclick="navigate('/${type}?cat=${c.id}')">${c.name.toUpperCase()}</div>`).join('')}
+  <div class="container" style="margin-top: 3rem;">
+    <div class="catalogue-filters">
+      <div class="filter-pill ${activeCat === 'all' ? 'active' : ''}" onclick="navigate('/${type}')">ALL SPECS</div>
+      ${cats.map(c => `<div class="filter-pill ${activeCat === c.id ? 'active' : ''}" onclick="navigate('/${type}?cat=${c.id}')">${c.name.toUpperCase()}</div>`).join('')}
+    </div>
   </div>
 
   <div class="section" style="padding-top:2rem">
@@ -202,7 +204,9 @@ function renderProduct(id) {
   <div class="product-detail">
     <div class="product-gallery">
       <div class="product-gallery__main">
-        <div style="width:100%;height:100%;background:linear-gradient(135deg,${p.gradient[0]},${p.gradient[1]});display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:10rem;color:white;mix-blend-mode:multiply">IP UNIT</div>
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,${p.gradient[0]},${p.gradient[1]});overflow:hidden;position:relative;">
+          <img src="${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
       </div>
     </div>
     <div class="product-info">
