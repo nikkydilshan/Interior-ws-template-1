@@ -45,8 +45,8 @@ function buildProductCard(p) {
   
   return `
   <div class="product-card" data-id="${p.id}" onclick="navigate('/product/${p.id}')">
-    <div class="product-card__image-wrap">
-      <div style="width:100%;height:100%;background:linear-gradient(135deg,${p.gradient[0]},${p.gradient[1]});display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:4rem;color:white;opacity:0.2">IP ${p.id}</div>
+    <div class="product-card__image-wrap" style="overflow:hidden;position:relative;background:linear-gradient(135deg,${p.gradient[0]},${p.gradient[1]});">
+      <img src="${p.image}" alt="${p.name}" class="product-img-hover" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);">
       ${p.badge ? `<div class="product-badge mono">${p.badge.toUpperCase()}</div>` : ''}
       <button class="wishlist-btn ${wishActive}" onclick="event.stopPropagation();Wishlist.toggle(${p.id})">${Wishlist.has(p.id)?'♥':'♡'}</button>
     </div>
@@ -88,7 +88,7 @@ function openWishlist() {
       <div class="sidebar-body">
         ${Wishlist.items.map(i => `
           <div class="wish-item">
-            <div style="width:80px;height:80px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-family:var(--display);font-size:1.5rem">IP ${i.id}</div>
+            <img src="${i.image}" alt="${i.name}" style="width:80px;height:80px;object-fit:cover;border:var(--border-w) solid var(--border);box-shadow:3px 3px 0px var(--border);">
             <div style="flex:1">
               <div class="mono" style="font-size:0.85rem;color:var(--accent)">REF: 00${i.id}</div>
               <h4 class="display" style="font-size:1.5rem">${i.name}</h4>

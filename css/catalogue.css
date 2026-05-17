@@ -17,11 +17,11 @@
 .catalogue-filters {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--border-w);
   background: var(--border);
-  border-bottom: var(--border-w) solid var(--border);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  border: var(--border-w) solid var(--border);
+  box-shadow: 8px 8px 0px var(--border);
 }
 
 @media (max-width: 768px) {
@@ -34,9 +34,9 @@
   background: var(--surface);
   padding: var(--s-3) var(--s-5);
   font-family: var(--display);
-  font-size: 1.5rem;
-  flex: 1;
-  min-width: 180px;
+  font-size: 1.25rem;
+  flex: 1 1 auto;
+  min-width: 150px;
   text-align: center;
   transition: var(--transition);
   cursor: pointer;
@@ -58,9 +58,9 @@
 
 @media (max-width: 768px) {
   .filter-pill {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     padding: var(--s-2) var(--s-3);
-    min-width: 120px;
+    min-width: 110px;
   }
 }
 
