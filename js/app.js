@@ -56,7 +56,7 @@ const App = {
     if (footer) footer.innerHTML = this.buildFooter();
     
     document.body.insertAdjacentHTML('beforeend', `
-      <div id="toast-container" style="position:fixed;bottom:2rem;right:2rem;z-index:3000"></div>
+      <div id="toast-container" style="position:fixed;top:2rem;right:2rem;z-index:3000"></div>
       <div id="wish-overlay"></div>
       <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
     `);
@@ -242,6 +242,20 @@ const App = {
       const bar = document.getElementById('nav-search-bar');
       const btn = e.target.closest('[onclick="toggleSearch()"]');
       if (bar && !bar.contains(e.target) && !btn) bar.classList.remove('open');
+    });
+
+    // Auto-hide navigation dropdowns on link clicks to prevent persistent overlaps
+    document.querySelectorAll('.nav-link, .dropdown-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const item = link.closest('.nav-item');
+        const dropdown = item ? item.querySelector('.nav-dropdown') : null;
+        if (dropdown) {
+          dropdown.style.display = 'none';
+          setTimeout(() => {
+            dropdown.style.display = '';
+          }, 500);
+        }
+      });
     });
   },
 
