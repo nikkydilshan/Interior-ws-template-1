@@ -1,5 +1,6 @@
 /* ── BENTO HERO SECTION ─────────────────────────────────── */
 .hero {
+  position: relative;
   border-bottom: var(--border-w) solid var(--border);
   background: var(--surface);
   display: flex;
@@ -8,9 +9,13 @@
 
 .hero-slide {
   flex: 1;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr;
   min-height: 80vh;
+}
+
+.hero-slide.active {
+  display: grid;
 }
 
 @media (max-width: 1024px) {
@@ -33,7 +38,7 @@
 }
 
 .hero-slide__content {
-  padding: var(--s-6);
+  padding: var(--s-4) var(--s-6);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,7 +78,7 @@
 
 .hero-slide__sub {
   font-size: 1.25rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   max-width: 450px;
 }
 
