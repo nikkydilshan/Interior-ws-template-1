@@ -267,10 +267,11 @@
 }
 
 .brand-story-logo {
-  width: 60%;
-  height: 60%;
+  width: 50%;
+  height: 50%;
   color: var(--accent);
   display: block;
+  overflow: visible;
 }
 
 .brand-story-logo .planet-core {
