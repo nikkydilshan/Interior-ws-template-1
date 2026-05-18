@@ -229,13 +229,40 @@
   }
 }
 
-/* Rotating Planet Logo Animation */
-@keyframes spin-planet {
+/* Rotating and Oscillating Rings Animation */
+@keyframes spin-oscillate-1 {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(35deg) scaleX(1) scaleY(1);
+  }
+  25% {
+    transform: rotate(125deg) scaleX(1.08) scaleY(0.92);
+  }
+  50% {
+    transform: rotate(215deg) scaleX(1) scaleY(1.08);
+  }
+  75% {
+    transform: rotate(305deg) scaleX(0.92) scaleY(0.92);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(395deg) scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes spin-oscillate-2 {
+  0% {
+    transform: rotate(-35deg) scaleX(1) scaleY(1);
+  }
+  25% {
+    transform: rotate(-125deg) scaleX(0.92) scaleY(1.08);
+  }
+  50% {
+    transform: rotate(-215deg) scaleX(1) scaleY(0.92);
+  }
+  75% {
+    transform: rotate(-305deg) scaleX(1.08) scaleY(1.08);
+  }
+  100% {
+    transform: rotate(-395deg) scaleX(1) scaleY(1);
   }
 }
 
@@ -246,9 +273,19 @@
   display: block;
 }
 
-.brand-story-logo .planet-orbits {
+.brand-story-logo .planet-core,
+.brand-story-logo .planet-axis {
+  transform: none;
+}
+
+.brand-story-logo .planet-ring-1 {
   transform-origin: center;
-  animation: spin-planet 12s linear infinite;
+  animation: spin-oscillate-1 10s linear infinite;
+}
+
+.brand-story-logo .planet-ring-2 {
+  transform-origin: center;
+  animation: spin-oscillate-2 12s linear infinite;
 }
 
 .brand-story>div:last-child {

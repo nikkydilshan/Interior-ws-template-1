@@ -102,11 +102,9 @@ function renderHome() {
           <div class="brand-story__logo-container" style="display:flex;align-items:center;justify-content:center;background:var(--accent-2);overflow:hidden;">
             <svg class="brand-story-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
               <circle class="planet-core" cx="12" cy="12" r="7" fill="var(--surface)"></circle>
-              <g class="planet-orbits">
-                <ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(35 12 12)"></ellipse>
-                <ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(-35 12 12)"></ellipse>
-                <line x1="12" y1="3" x2="12" y2="21"></line>
-              </g>
+              <line class="planet-axis" x1="12" y1="3" x2="12" y2="21"></line>
+              <ellipse class="planet-ring-1" cx="12" cy="12" rx="11" ry="4"></ellipse>
+              <ellipse class="planet-ring-2" cx="12" cy="12" rx="11" ry="4"></ellipse>
             </svg>
           </div>
         </div>
