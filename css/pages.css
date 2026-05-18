@@ -229,6 +229,28 @@
   }
 }
 
+/* Rotating Planet Logo Animation */
+@keyframes spin-planet {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.brand-story-logo {
+  width: 60%;
+  height: 60%;
+  color: var(--accent);
+  display: block;
+}
+
+.brand-story-logo .planet-orbits {
+  transform-origin: center;
+  animation: spin-planet 12s linear infinite;
+}
+
 .brand-story>div:last-child {
   background: var(--surface);
   padding: 6rem;
