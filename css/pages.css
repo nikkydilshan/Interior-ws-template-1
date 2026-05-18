@@ -229,40 +229,40 @@
   }
 }
 
-/* Rotating and Oscillating Rings Animation */
-@keyframes spin-oscillate-1 {
+/* Premium 3D Orbital Revolution & Oscillation (Keplerian) */
+@keyframes revolve-orbit-1 {
   0% {
-    transform: rotate(35deg) scaleX(1) scaleY(1);
+    transform: rotate(35deg) scaleX(1) scaleY(1) skewX(0deg);
   }
   25% {
-    transform: rotate(125deg) scaleX(1.08) scaleY(0.92);
+    transform: rotate(125deg) scaleX(0.7) scaleY(1.3) skewX(8deg);
   }
   50% {
-    transform: rotate(215deg) scaleX(1) scaleY(1.08);
+    transform: rotate(215deg) scaleX(1.2) scaleY(0.7) skewX(0deg);
   }
   75% {
-    transform: rotate(305deg) scaleX(0.92) scaleY(0.92);
+    transform: rotate(305deg) scaleX(0.7) scaleY(1.3) skewX(-8deg);
   }
   100% {
-    transform: rotate(395deg) scaleX(1) scaleY(1);
+    transform: rotate(395deg) scaleX(1) scaleY(1) skewX(0deg);
   }
 }
 
-@keyframes spin-oscillate-2 {
+@keyframes revolve-orbit-2 {
   0% {
-    transform: rotate(-35deg) scaleX(1) scaleY(1);
+    transform: rotate(-35deg) scaleX(1) scaleY(1) skewX(0deg);
   }
   25% {
-    transform: rotate(-125deg) scaleX(0.92) scaleY(1.08);
+    transform: rotate(-125deg) scaleX(1.3) scaleY(0.7) skewX(-8deg);
   }
   50% {
-    transform: rotate(-215deg) scaleX(1) scaleY(0.92);
+    transform: rotate(-215deg) scaleX(0.7) scaleY(1.3) skewX(0deg);
   }
   75% {
-    transform: rotate(-305deg) scaleX(1.08) scaleY(1.08);
+    transform: rotate(-305deg) scaleX(1.3) scaleY(0.7) skewX(8deg);
   }
   100% {
-    transform: rotate(-395deg) scaleX(1) scaleY(1);
+    transform: rotate(-395deg) scaleX(1) scaleY(1) skewX(0deg);
   }
 }
 
@@ -273,19 +273,18 @@
   display: block;
 }
 
-.brand-story-logo .planet-core,
-.brand-story-logo .planet-axis {
+.brand-story-logo .planet-core {
   transform: none;
 }
 
 .brand-story-logo .planet-ring-1 {
   transform-origin: center;
-  animation: spin-oscillate-1 10s linear infinite;
+  animation: revolve-orbit-1 9s ease-in-out infinite;
 }
 
 .brand-story-logo .planet-ring-2 {
   transform-origin: center;
-  animation: spin-oscillate-2 12s linear infinite;
+  animation: revolve-orbit-2 11s ease-in-out infinite;
 }
 
 .brand-story>div:last-child {
