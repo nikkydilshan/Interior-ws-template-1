@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;700;900&display=swap');
 
 :root {
-  /* Colors - White, Gold, and Black (From Premium Silver Website) */
-  --bg: #fbf9f6;
+  /* Colors - Cool slate + forest green/teal accent (From Main Website) */
+  --bg: #F4F6F8;
   --surface: #FFFFFF;
-  --text: #181715;
-  --accent: #c5a059;
-  --accent-2: #f5eedf; 
-  --border: #181715;
+  --text: #1B2430;
+  --accent: #2D6A4F;
+  --accent-2: #B7E4C7; 
+  --border: #1B2430;
   
   /* Brutalist Specs */
   --border-w: 2px;

@@ -99,7 +99,13 @@ function renderHome() {
     <div class="container">
       <div class="brand-story">
         <div class="brand-story__image">
-          <div style="overflow:hidden;"><img src="assets/images/classic_pop_ceiling.png" alt="Interior Planet Lab" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="brand-story__logo-container" style="display:flex;align-items:center;justify-content:center;background:var(--accent-2);overflow:hidden;">
+            <svg class="brand-story-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle class="planet-core" cx="12" cy="12" r="7" fill="var(--surface)"></circle>
+              <ellipse class="planet-ring-1" cx="12" cy="12" rx="11" ry="4"></ellipse>
+              <ellipse class="planet-ring-2" cx="12" cy="12" rx="11" ry="4"></ellipse>
+            </svg>
+          </div>
         </div>
         <div>
           <button class="btn btn-accent" onclick="navigate('/about')">READ OUR HISTORY</button>
